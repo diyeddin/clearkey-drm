@@ -69,4 +69,4 @@ Now the ClearKey Server should be able to see the keyId and key pair and should 
 This repository provides a website and its javascript code to test the video player. Make sure to provide the compiled shaka-player and the encoded video playlist in the same directory as the website.
 
 # Acknowledgments
-- A special thanks to the original owner of the [ClearKey Server](https://github.com/AlexandreBrg/go-clearkey-server) implementation!
+- A special thanks to the original owner of the [ClearKey Server](https://github.com/AlexandreBrg/go-clearkey-server) implementation and for my bro [Xenowo](https://github.com/XenowoAct)!
