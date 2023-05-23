@@ -56,7 +56,7 @@ cd ~/go-clearkey-server
 go run .
 ```
 Now our DRM Server is running and connected to our database.
-We can check that bu going to http://localhost:8080/license, we should start seeing the licenses if there's data in the database.
+We can check that by going to http://localhost:8080/license, we should start seeing the licenses if there's data in the database.
 
 To HLS encode videos and encrypt them we can use **encode.py** that is provided in this repository. This script automates the encoding process and sends the encryption keys to the database. It's used as below:
 ```bash
