@@ -1,4 +1,4 @@
-const manifestUri = 'master.m3u8';
+const manifestUri = 'rick/rick_master.m3u8';
 const licenseServerUrl = 'http://localhost:8080/license'
 
 async function init() {
