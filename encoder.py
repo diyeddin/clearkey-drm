@@ -101,5 +101,5 @@ if __name__=='__main__':
     
     encoding = encode_video(video_name, output_name)
     print("video encoding:", encoding)
-    insert_value(db_config, ["type", "id", "value"], ("temporary", encoding["kid"], encoding["key"]))
+    insert_value(db_config, ["type", "id", "value"], ("oct", encoding["kid"], encoding["key"]))
     fetch_data(db_config, "id", encoding["kid"])
