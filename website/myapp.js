@@ -13,36 +13,20 @@ async function init() {
   player.addEventListener('error', onPlayerErrorEvent);
   controls.addEventListener('error', onUIErrorEvent);
 
-try {
-    const serverStatus = await checkServerStatus(licenseServerUrl);
-    if (!serverStatus) {
-      console.error('ClearKey DRM server is not available.');
-      return;
-    }
-
-    player.configure({
-      drm: {
-        servers: {
-          'org.w3.clearkey': licenseServerUrl
-        }
+  player.configure({
+    drm: {
+      servers: {
+        'org.w3.clearkey': licenseServerUrl
       }
-    });
+    }
+  });
 
+  try {
     await player.load(manifestUri);
     console.log('The video has now been loaded!');
   } catch (error) {
     onPlayerError(error);
-  }
-}
-
-async function checkServerStatus(serverUrl) {
-  try {
-    const response = await fetch(serverUrl);
-    return response.status === 200;
-  } catch (error) {
-    console.error('Error checking server status:', error);
-    return false;
-  }
+    }
 }
 
 function onPlayerErrorEvent(errorEvent) {
