@@ -57,6 +57,7 @@ go run .
 ```
 Now our DRM Server is running and connected to our database.
 We can check that by going to http://localhost:8080/license, we should start seeing the licenses if there's data in the database.
+![Example Data](resources/server_post.png)
 
 To HLS encode videos and encrypt them we can use **encode.py** that is provided in this repository. This script automates the encoding process and sends the encryption keys to the database. It's used as below:
 ```bash
@@ -67,6 +68,17 @@ It should output the keyId and key values that it encoded the video with.
 Now the ClearKey Server should be able to see the keyId and key pair and should provide the video player with the appropriate license.
 
 This repository provides a website and its javascript code to test the video player. Make sure to provide the compiled shaka-player and the encoded video playlist in the same directory as the website.
+
+# Examples
+### Example request payload of Shaka Player
+![Example Payload](resources/example_payload.png)
+
+### Example response from ClearKey server
+![Example Response](resources/example_response.png)
+
+### What appears in the ClearKey server log after refreshing the website
+Here the server is selecting the corresponding key for the requested key id
+![Server Log](resources/server_log.png)
 
 # Acknowledgments
 - A special thanks to the original owner of the [ClearKey Server](https://github.com/AlexandreBrg/go-clearkey-server) implementation!
