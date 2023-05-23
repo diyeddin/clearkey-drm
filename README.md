@@ -74,6 +74,7 @@ This repository provides a website and its javascript code to test the video pla
 ![Example Payload](resources/example_payload.png)
 
 ### Example response from ClearKey server
+As you can see here, the response is according to the [W3C](https://www.w3.org/TR/encrypted-media/#clear-key-license-format) specifications.
 ![Example Response](resources/example_response.png)
 
 ### What appears in the ClearKey server log after refreshing the website
